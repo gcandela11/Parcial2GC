@@ -1,0 +1,24 @@
+<!-- listar-paises.component.html -->
+
+<div class="container">
+  <h2>Lista de Países</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Idioma Oficial</th>
+        <th>Capital</th>
+        <th>Año de Conformación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pais of paises">
+        <td>{{ pais.nombre }}</td>
+        <td>{{ pais.idioma }}</td>
+        <td>{{ pais.capital }}</td>
+        <td>{{ pais.anioConformacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="paisMasAntiguo">El país más antiguo de la lista es {{ paisMasAntiguo.nombre }} ({{ 2022 - paisMasAntiguo.anioConformacion }} años)</p>
+</div>
